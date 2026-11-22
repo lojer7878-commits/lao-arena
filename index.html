@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LAO ARENA | MLBB Community</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080d18;--panel:#111a2b;--panel2:#172338;--line:#263650;--cyan:#35d9ed;--gold:#f5c45c;--muted:#9aabc2;--green:#43d69a;--red:#ff7185}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#102b42 0,transparent 35%),var(--bg);color:#f5f8ff;font-family:"Noto Sans Thai",Inter,sans-serif;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1180px;margin:auto;padding:20px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0 22px;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),#3476ff);display:grid;place-items:center;color:#06101c;font-weight:900;font-size:22px}.brand h1{font-size:19px;margin:0;letter-spacing:1px}.brand small{color:var(--muted)}.pill{padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--gold);font-weight:700}.hero{margin:22px 0;padding:26px;border:1px solid #25415c;border-radius:22px;background:linear-gradient(110deg,#12283c,#151c31 65%,#29243a);display:flex;justify-content:space-between;gap:20px;align-items:center}.hero h2{font-size:clamp(22px,4vw,34px);margin:0 0 8px}.hero p{color:#b6c6d9;margin:0;max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:11px 16px;border-radius:12px;font-weight:800;background:var(--cyan);color:#07111d}.btn.secondary{background:#22334b;color:#eaf5ff;border:1px solid var(--line)}.btn.danger{background:#492638;color:#ffdce2}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}.card h3{margin:0 0 12px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px}.section-head h2{font-size:19px;margin:0}.muted{color:var(--muted)}.match{display:flex;flex-direction:column;gap:12px}.match-top{display:flex;justify-content:space-between;gap:12px}.tag{font-size:12px;padding:4px 8px;border-radius:8px;background:#123743;color:var(--cyan);font-weight:700}.amount{color:var(--gold);font-weight:800;font-size:20px}.match-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:12px}.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}.modal{position:fixed;inset:0;background:#020611d9;display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.modal.show{display:flex}.modalbox{width:min(480px,100%);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;max-height:90vh;overflow:auto}.modalbox h2{margin:0 0 16px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:13px;color:#c4d1e2}.field input,.field select,.field textarea{width:100%;background:#091222;border:1px solid var(--line);border-radius:11px;padding:12px;color:#fff;outline:none}.field input:focus,.field select:focus{border-color:var(--cyan)}.row{display:flex;gap:10px}.row>*{flex:1}.close{float:right;background:transparent;color:#aebed2;font-size:23px}.tabs{display:flex;gap:8px;margin:12px 0}.tabs button{background:#1c2b42;color:#dbe8f7;border-radius:10px;padding:8px 13px}.tabs button.active{background:var(--cyan);color:#06111b;font-weight:800}.hidden{display:none!important}.profile{display:flex;align-items:center;gap:10px}.avatar{width:36px;height:36px;border-radius:11px;background:#224e69;display:grid;place-items:center;font-weight:900;color:var(--cyan)}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#18354a;border:1px solid var(--cyan);padding:12px 18px;border-radius:12px;z-index:9;box-shadow:0 8px 30px #0008}.room-chat{height:210px;overflow:auto;background:#091222;border:1px solid var(--line);border-radius:12px;padding:10px;margin:10px 0}.chatline{padding:6px 0;border-bottom:1px solid #1c2a3d;font-size:13px}.note{font-size:12px;color:#eacb86;background:#392e1b;border:1px solid #66502a;padding:11px;border-radius:12px;line-height:1.6}.footer{color:#74859d;text-align:center;padding:28px 0;font-size:12px}
+@media(max-width:760px){.wrap{padding:14px}.top{align-items:flex-start;flex-wrap:wrap}.hero{align-items:flex-start;flex-direction:column;padding:20px}.grid{grid-template-columns:1fr}.actions{width:100%}.actions .btn{flex:1}.match-foot{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="logo">LA</div><div><h1>LAO ARENA</h1><small>MLBB • Community Matchmaking</small></div></div>
+ <div class="profile"><div class="pill" id="balance">0 LAK</div><div class="avatar" id="avatar">?</div><span id="userlabel" class="muted">Guest</span><button class="btn secondary" id="authBtn" onclick="openAuth()">เข้าสู่ระบบ</button><button class="btn secondary hidden" id="logoutBtn" onclick="logout()">ออก</button></div>
+</header>
+<section class="hero">
+ <div><span class="tag">LAO ESPORTS COMMUNITY</span><h2>ค้นหาทีม แล้วลงสนามกันเลย</h2><p>สร้างห้องแข่งขัน MLBB ค้นหาคู่แข่ง เข้าร่วมแมตช์ และพูดคุยรายละเอียดกับอีกทีมได้ในที่เดียว</p></div>
+ <div class="actions"><button class="btn" onclick="openCreate()">＋ สร้างห้องแข่ง</button><button class="btn secondary" onclick="openTeam()">จัดการทีม</button></div>
+</section>
+<div class="section-head"><h2>ห้องแข่งขันที่เปิดรับทีม</h2><div class="tabs"><button class="active" id="allTab" onclick="filterMatches('all')">ทั้งหมด</button><button id="fiveTab" onclick="filterMatches('5v5')">5v5</button><button id="oneTab" onclick="filterMatches('1v1')">1v1</button></div></div>
+<div id="matches" class="grid"></div>
+<div class="section-head"><h2>ทีมของฉัน</h2></div>
+<div class="card" id="myteam"><span class="muted">เข้าสู่ระบบเพื่อจัดการทีมของคุณ</span></div>
+<div class="footer">LAO ARENA • Prototype build • ใช้สำหรับทดสอบระบบเท่านั้น</div>
+</div>
+
+<div class="modal" id="authModal"><div class="modalbox"><button class="close" onclick="closeModal('authModal')">×</button><h2>บัญชี LAO ARENA</h2><div class="tabs"><button id="loginTab" class="active" onclick="authMode('login')">เข้าสู่ระบบ</button><button id="registerTab" onclick="authMode('register')">สมัครสมาชิก</button></div>
+<form id="authForm" onsubmit="authSubmit(event)">
+<div class="field"><label>อีเมล</label><input id="email" type="email" required placeholder="you@example.com"></div>
+<div class="field"><label>รหัสผ่าน</label><input id="password" type="password" minlength="6" required placeholder="อย่างน้อย 6 ตัวอักษร"></div>
+<div id="registerFields" class="hidden"><div class="field"><label>ชื่อทีม</label><input id="teamName" placeholder="เช่น Vientiane Esports"></div><div class="field"><label>MLBB ID (พร้อม Server ID)</label><input id="mlbbId" placeholder="12345678 (1234)"></div></div>
+<button class="btn" style="width:100%">ดำเนินการ</button></form>
+<p class="muted" style="font-size:12px">โหมดทดสอบ: บัญชีและข้อมูลเก็บในเบราว์เซอร์เครื่องนี้เท่านั้น ไม่ใช่ระบบสมาชิกออนไลน์</p></div></div>
+
+<div class="modal" id="createModal"><div class="modalbox"><button class="close" onclick="closeModal('createModal')">×</button><h2>สร้างห้องแข่งขัน</h2>
+<form onsubmit="createMatch(event)">
+<div class="field"><label>ชื่อทีม</label><input id="createTeam" required></div>
+<div class="row"><div class="field"><label>รูปแบบ</label><select id="format"><option value="5v5">5v5 Custom Draft</option><option value="1v1">1v1 Mid Only</option></select></div><div class="field"><label>แรงก์</label><select id="rank"><option>ไม่จำกัด</option><option>Mythic+</option><option>Mythical Glory+</option></select></div></div>
+<div class="field"><label>เงินเดิมพันต่อทีม (LAK) — แสดงเพื่อวางแผนเท่านั้น</label><input id="stake" type="number" min="0" step="10000" value="100000"></div>
+<div class="note">ยังไม่รับหรือหักเงินจริงในรุ่นนี้ เงินเดิมพันเป็นข้อมูลประกอบเท่านั้น ระบบชำระเงินจริงต้องเชื่อม BCEL และระบบหลังบ้านที่ตรวจสอบได้ก่อน</div>
+<button class="btn" style="width:100%;margin-top:14px">สร้างห้อง</button></form></div></div>
+
+<div class="modal" id="teamModal"><div class="modalbox"><button class="close" onclick="closeModal('teamModal')">×</button><h2>ตั้งค่าทีม</h2><form onsubmit="saveTeam(event)"><div class="field"><label>ชื่อทีม</label><input id="editTeam" required></div><div class="field"><label>MLBB ID</label><input id="editMlbb"></div><button class="btn" style="width:100%">บันทึกทีม</button></form></div></div>
+
+<div class="modal" id="roomModal"><div class="modalbox"><button class="close" onclick="closeModal('roomModal')">×</button><h2 id="roomTitle">ห้องแข่งขัน</h2><div id="roomInfo"></div><div class="room-chat" id="chat"></div><form class="row" onsubmit="sendChat(event)"><input id="chatText" placeholder="พิมพ์ข้อความ..." required style="min-width:0;background:#091222;border:1px solid var(--line);border-radius:10px;padding:10px;color:white"><button class="btn">ส่ง</button></form><button class="btn secondary" style="width:100%;margin-top:12px" onclick="closeModal('roomModal')">ปิดห้อง</button></div></div>
+<div id="toast" class="toast hidden"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const storeKey='laoArenaPrototypeV1';
+let db=JSON.parse(localStorage.getItem(storeKey)||'null')||{users:[],matches:[],current:null};
+let filter='all',activeRoom=null,mode='login';
+function save(){localStorage.setItem(storeKey,JSON.stringify(db));}
+function toast(s){$('toast').textContent=s;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),2600)}
+function openModal(id){$(id).classList.add('show')}function closeModal(id){$(id).classList.remove('show')}
+function current(){return db.users.find(u=>u.email===db.current)||null}
+function openAuth(){authMode('login');openModal('authModal')}
+function authMode(m){mode=m;$('loginTab').classList.toggle('active',m==='login');$('registerTab').classList.toggle('active',m==='register');$('registerFields').classList.toggle('hidden',m!=='register')}
+function authSubmit(e){e.preventDefault();let email=$('email').value.trim().toLowerCase(),pass=$('password').value;
+ if(mode==='register'){if(db.users.some(u=>u.email===email))return toast('อีเมลนี้สมัครแล้ว');let u={email,pass,team:$('teamName').value.trim()||'MY TEAM',mlbb:$('mlbbId').value.trim(),balance:0};db.users.push(u);db.current=email;toast('สมัครบัญชีทดสอบสำเร็จ')}
+ else{let u=db.users.find(x=>x.email===email&&x.pass===pass);if(!u)return toast('อีเมลหรือรหัสผ่านไม่ถูกต้อง');db.current=email;toast('เข้าสู่ระบบแล้ว')}
+ save();closeModal('authModal');render();}
+function logout(){db.current=null;save();render();toast('ออกจากระบบแล้ว')}
+function openCreate(){let u=current();if(!u)return openAuth();$('createTeam').value=u.team;openModal('createModal')}
+function createMatch(e){e.preventDefault();let u=current();if(!u)return;let m={id:'LA'+Date.now().toString().slice(-7),owner:u.email,team:$('createTeam').value.trim(),format:$('format').value,rank:$('rank').value,stake:Math.max(0,Number($('stake').value)||0),challenger:null,challengerTeam:null,chat:[],created:Date.now()};db.matches.unshift(m);save();closeModal('createModal');render();toast('สร้างห้องแข่งขันแล้ว')}
+function joinMatch(id){let u=current();if(!u)return openAuth();let m=db.matches.find(x=>x.id===id);if(!m||m.challenger)return toast('ห้องนี้มีทีมเข้าร่วมแล้ว');if(m.owner===u.email)return toast('คุณไม่สามารถเข้าร่วมห้องของตัวเอง');m.challenger=u.email;m.challengerTeam=u.team;save();render();openRoom(id);toast('เข้าร่วมห้องแล้ว')}
+function filterMatches(f){filter=f;['all','5v5','1v1'].forEach(x=>$(x==='all'?'allTab':x==='5v5'?'fiveTab':'oneTab').classList.toggle('active',x===f));renderMatches()}
+function renderMatches(){let list=db.matches.filter(m=>filter==='all'||m.format===filter);$('matches').innerHTML=list.length?list.map(m=>`<article class="card match"><div class="match-top"><div><span class="tag">${m.format}</span> <span class="tag">${escapeHtml(m.rank)}</span><h3 style="margin:10px 0 3px">${escapeHtml(m.team)} <span class="muted">vs</span> ${m.challengerTeam?escapeHtml(m.challengerTeam):'รอทีมท้าชิง'}</h3><small class="muted">ห้อง ${m.id} • ${new Date(m.created).toLocaleString('th-TH')}</small></div><div class="amount">${m.stake.toLocaleString()}<small style="display:block;font-size:11px">LAK / ทีม</small></div></div><div class="match-foot"><span class="muted">${m.challenger?'มีทีมเข้าร่วมแล้ว':'เปิดรับทีมท้าชิง'}</span><div class="actions">${m.challenger?`<button class="btn secondary" onclick="openRoom('${m.id}')">เข้าห้อง</button>`:`<button class="btn" onclick="joinMatch('${m.id}')">เข้าร่วม</button>`}</div></div></article>`).join(''):'<div class="empty" style="grid-column:1/-1">ยังไม่มีห้องแข่งขัน ลองสร้างห้องแรกของคุณ</div>'}
+function openTeam(){let u=current();if(!u)return openAuth();$('editTeam').value=u.team;$('editMlbb').value=u.mlbb||'';openModal('teamModal')}
+function saveTeam(e){e.preventDefault();let u=current();u.team=$('editTeam').value.trim();u.mlbb=$('editMlbb').value.trim();save();closeModal('teamModal');render();toast('บันทึกทีมแล้ว')}
+function render(){let u=current();$('balance').textContent=(u?u.balance:0).toLocaleString()+' LAK';$('avatar').textContent=u?(u.team||'T').slice(0,1).toUpperCase():'?';$('userlabel').textContent=u?u.team:'Guest';$('authBtn').classList.toggle('hidden',!!u);$('logoutBtn').classList.toggle('hidden',!u);$('myteam').innerHTML=u?`<b>${escapeHtml(u.team)}</b><p class="muted">อีเมล: ${escapeHtml(u.email)}<br>MLBB ID: ${escapeHtml(u.mlbb||'-')}</p><button class="btn secondary" onclick="openTeam()">แก้ไขข้อมูลทีม</button>`:'<span class="muted">เข้าสู่ระบบเพื่อจัดการทีมของคุณ</span>';renderMatches()}
+function openRoom(id){let m=db.matches.find(x=>x.id===id);if(!m)return;activeRoom=id;$('roomTitle').textContent='ห้อง '+id;$('roomInfo').innerHTML=`<p><b>${escapeHtml(m.team)}</b> vs <b>${escapeHtml(m.challengerTeam||'รอทีมท้าชิง')}</b></p><p class="muted">${m.format} • ${m.stake.toLocaleString()} LAK ต่อทีม</p><div class="note">ห้องนี้เป็นแชททดสอบบนเบราว์เซอร์เครื่องนี้ ข้อความยังไม่ซิงก์ข้ามผู้ใช้หรืออุปกรณ์</div>`;renderChat(m);openModal('roomModal')}
+function renderChat(m){$('chat').innerHTML=m.chat.length?m.chat.map(c=>`<div class="chatline"><b>${escapeHtml(c.team)}</b> <span class="muted">${new Date(c.at).toLocaleTimeString('th-TH')}</span><br>${escapeHtml(c.text)}</div>`).join(''):'<span class="muted">ยังไม่มีข้อความ</span>'}
+function sendChat(e){e.preventDefault();let u=current(),m=db.matches.find(x=>x.id===activeRoom);if(!u||!m)return toast('กรุณาเข้าสู่ระบบ');m.chat.push({team:u.team,text:$('chatText').value.trim(),at:Date.now()});$('chatText').value='';save();renderChat(m)}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+render();
+</script>
+</body></html>
